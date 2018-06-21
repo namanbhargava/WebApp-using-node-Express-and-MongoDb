@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+    <script src="js/todo-list.js"></script>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <a href="/chat" >Chat</a>
+    <a href="/feedback" >Feedback</a>
+
+    <h1>List of tasks</h1>
+    <form>
+      <input type="text" name="task" />
+      <button type="submit">Add to task</button>
+    </form>
+      <ul>
+        <% for( var i=0; i< todos.length; i++){ %>
+          <li><%= todos[i].item %></li>
+        <% } %>
+      </ul>
+
+  </body>
+</html>
