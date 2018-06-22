@@ -7,15 +7,26 @@
             integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
             crossorigin="anonymous"></script>
     <script src="js/todo-list.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <h1>Hello</h1>
-    <a href="/chat" >Chat</a>
-    <a href="/feedback" >Feedback</a>
+    <div>
+    <h1>To-Do App</h1>
+  </div>
+  <br />
+    <hr />
 
+    <div class="links">
+      <a href="/">Home &nbsp;&nbsp;&nbsp;</a>|
+      <a href="/chat" >Chat &nbsp;&nbsp;&nbsp;</a>|
+      <a href="/feedback" >Feedback &nbsp;&nbsp;&nbsp;</a>
+
+    <hr />
+    <br /><br /><br /><br />
     <h1>List of tasks</h1>
+
     <form>
-      <input type="text" name="task" />
+      <input type="text" name="task" /><br /><br />
       <button type="submit">Add to task</button>
     </form>
       <ul>
@@ -23,6 +34,6 @@
           <li><%= todos[i].item %></li>
         <% } %>
       </ul>
-
+    </div>
   </body>
 </html>
