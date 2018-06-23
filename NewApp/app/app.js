@@ -18,8 +18,10 @@ var server = app.listen(process.env.PORT || 3000, function(){
 io.attach(server);
 
   io.on('connection', function(socket){
-  console.log("user connected");
+
+    console.log("user connected");
     socket.on('postMessage', function(data){
       io.emit('updateMessage', data);
+
     })
   })

@@ -9,6 +9,7 @@ socket.on('connect', function(){
 
   chatForm.addEventListener('submit', function(e){
     e.preventDefault();
+
     socket.emit('postMessage',{
                   username: chatUsername.value,
                   message: chatMessage.value
@@ -16,10 +17,10 @@ socket.on('connect', function(){
     chatMessage.value="";
   });
 
+
   socket.on('updateMessage', function(data){
     showMessage(data);
   })
-
   }
 
 })
